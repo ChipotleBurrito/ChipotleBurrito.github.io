@@ -249,7 +249,10 @@ dropContainer.ondrop = function(evt) {
 
   evt.preventDefault();
 };
-  
+
+var data = {"Krish", "Sahil", "Saanvi", "Bob"};//array of Strings
+localStorage.setItem("data", JSON.stringify(data));//stringify takes all strings from data and stores it in localStorage
+JSON.parse(localStorage.getItem("data"));//it took the stringify items and parses(seeing if it can read the data) all of them
   
 
   /**
