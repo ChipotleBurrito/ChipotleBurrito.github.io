@@ -34,10 +34,8 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<!-- Login/Signup -->
-<html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
@@ -65,12 +63,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
-  <!-- Login/Signup -->
-  <meta charset="utf-8">
-  <title>Login and Registration Form in HTML | CodingNepal</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
   <!-- =======================================================
   * Template Name: Ninestars - v4.3.0
   * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
@@ -120,79 +113,7 @@
   <script src="assets/js/main.js"></script>
   
   <!-- Login/Signup -->
-  <div class="wrapper">
-         <div class="title-text">
-            <div class="title login">
-               Login Form
-            </div>
-            <div class="title signup">
-               Signup Form
-            </div>
-         </div>
-         <div class="form-container">
-            <div class="slide-controls">
-               <input type="radio" name="slide" id="login" checked>
-               <input type="radio" name="slide" id="signup">
-               <label for="login" class="slide login">Login</label>
-               <label for="signup" class="slide signup">Signup</label>
-               <div class="slider-tab"></div>
-            </div>
-            <div class="form-inner">
-               <form action="#" class="login">
-                  <div class="field">
-                     <input type="text" placeholder="Email Address" required>
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Password" required>
-                  </div>
-                  <div class="pass-link">
-                     <a href="#">Forgot password?</a>
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Login">
-                  </div>
-                  <div class="signup-link">
-                     Not a member? <a href="">Signup now</a>
-                  </div>
-               </form>
-               <form action="#" class="signup">
-                  <div class="field">
-                     <input type="text" placeholder="Email Address" required>
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Password" required>
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Confirm password" required>
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Signup">
-                  </div>
-               </form>
-            </div>
-         </div>
-      </div>
-      <script>
-         const loginText = document.querySelector(".title-text .login");
-         const loginForm = document.querySelector("form.login");
-         const loginBtn = document.querySelector("label.login");
-         const signupBtn = document.querySelector("label.signup");
-         const signupLink = document.querySelector("form .signup-link a");
-         signupBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "-50%";
-           loginText.style.marginLeft = "-50%";
-         });
-         loginBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "0%";
-           loginText.style.marginLeft = "0%";
-         });
-         signupLink.onclick = (()=>{
-           signupBtn.click();
-           return false;
-         });
-      </script>
+  
   
   
 </body>
@@ -242,5 +163,65 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+
+
+
+<!-- Login/Signup -->
+<html lang="en" >
+<html>
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="login_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body class="body">
+	
+	<a href="https://github.com/Mehedi61/Login-form-Sign-up-form"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+<div class="login-page">
+  <div class="form">
+
+    <form>
+      <lottie-player src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player>
+      <input type="text" placeholder="&#xf007;  username"/>
+      <input type="password" id="password" placeholder="&#xf023;  password"/>
+      <i class="fas fa-eye" onclick="show()"></i> 
+      <br>
+      <br>
+      <button>LOGIN</button>
+      <p class="message"></p>
+    </form>
+
+    <form class="login-form">
+      <button type="button" onclick="window.location.href='signup.html'">SIGN UP</button>
+    </form>
+  </div>
+</div>
+
+  <script>
+    function show(){
+      var password = document.getElementById("password");
+      var icon = document.querySelector(".fas")
+
+      // ========== Checking type of password ===========
+      if(password.type === "password"){
+        password.type = "text";
+      }
+      else {
+        password.type = "password";
+      }
+    };
+  </script>
+</body>
+</html>
+
 
 </html>
