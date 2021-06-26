@@ -111,8 +111,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
-  <!-- Login/Signup -->
+ 
   
   
   
@@ -168,11 +167,20 @@
 <!-- Drag and drop -->
 <html>
 <body>
-<div id="dropContainer" style="border:1px solid black;height:100px;">
-   Drop Here
-</div>
-  Should update here:
-  <input type="file" id="fileInput" />
+<script>
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');
+          img.onload = () => {
+              URL.revokeObjectURL(img.src);  // no longer needed, free memory
+          }
+
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+      }
+  });
+});  
+</script>
 </body>
 </html>
 
