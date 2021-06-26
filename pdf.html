@@ -166,22 +166,9 @@
 
 <!-- Drag and drop -->
 <html>
-<body>
-<script>
-window.addEventListener('load', function() {
-  document.querySelector('input[type="file"]').addEventListener('change', function() {
-      if (this.files && this.files[0]) {
-          var img = document.querySelector('img');
-          img.onload = () => {
-              URL.revokeObjectURL(img.src);  // no longer needed, free memory
-          }
-
-          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
-      }
-  });
-});  
-</script>
-</body>
+<input type="file" id="real-file" hidden="hidden" />
+<button type="button" id="custom-button">CHOOSE A FILE</button>
+<span id="custom-text">No file chosen, yet.</span>
 </html>
 
 
