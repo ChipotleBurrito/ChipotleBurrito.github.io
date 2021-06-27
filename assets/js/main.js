@@ -251,7 +251,7 @@ dropContainer.ondrop = function(evt) {
 };
 
 var elem = document.getElementByID("attachments");
-elem.addEventListener('change', getFileData);
+elem.addEventListener('change', getFileData,false);
   
 function getFileData(){
   alert("Hi, hola, im listening);
