@@ -172,17 +172,16 @@
 </div> 
   
 
-alert("test 1");  
   
 <label>Attachments</label>
 <div>
-  <input type="file" class="form-control input-ig" name="attachments" id="attachments" multiple>
+  <input type="file" class="form-control input-ig" name="attachments[]" id="attachments" multiple>
 </div>
  
 <ul id="result"></ul>
   
 <script>
-alert("test 2");    
+alert("test 1");    
 function getFileData1(){
   alert("Hi, hola, im listening1");
   const files = this.files;
@@ -196,12 +195,7 @@ function getFileData1(){
   }  
 }
   
-var elem = document.getElementByID('attachments');
-  
-alert("test 3");    
-  
-elem.addEventListener('change', getFileData1, false);
-alert("test 4");      
+document.getElementByID('attachments').addEventListener('change', getFileData1, false);
   
   
 
