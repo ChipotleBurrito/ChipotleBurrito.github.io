@@ -175,7 +175,7 @@
   
 <label>Attachments</label>
 <div>
-  <input type='file' name='attachments' id='attachments' onchange='getFileData1()'>
+  <input type='file' name='attachments' id='attachments' onChange='getFileData1()'>
 </div>
  
 <output id="result"></output>
@@ -188,6 +188,8 @@ function getFileData1(){
   var output = [];
   for (var i = 0, f; f = files[i]; i++) {
     alert(f.name + "  " + f.size);
+  }
+  alert(attachments.value.split('.')[0]);
   //const files = this.files;
   //const list = document.getElementByID("result");
   //let child;  
