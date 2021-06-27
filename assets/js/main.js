@@ -250,9 +250,20 @@ dropContainer.ondrop = function(evt) {
   evt.preventDefault();
 };
 
-
-
-
+var elem = document.getElementByID("attachments");
+elem.addEventListener('change', getFileData);
+  
+function getFileData(){
+  const files = this.files;
+  const list = document.getElementByID("result");
+  let child;  
+  for (let i = 0; i < files.length; i++){
+    child = document.getElement("li");
+    child.textContent = files[i].name;
+    
+    list.append(child);
+  }  
+}
   
 /*var data = {"Krish", "Sahil", "Saanvi", "Bob"};//array of Strings
 localStorage.setItem("data", JSON.stringify(data));//stringify takes all strings from data and stores it in localStorage
