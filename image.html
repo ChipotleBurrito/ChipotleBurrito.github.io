@@ -175,7 +175,7 @@
   
 <label>Attachments</label>
 <div>
-  <input type="file" name="attachments" id="attachments" onchange="getFileData1()">
+  <input type='file' name='attachments' id='attachments' onchange=getFileData1()>
 </div>
  
 <output id="result"></output>
@@ -185,7 +185,7 @@
    
 function getFileData1(){
   alert("Hi, hola, im listening1");
-  var files = evt.target.files;
+  var files = evt.target.attachments;
   var output = [];
   for (var i = 0, f; f = files[i]; i++) {
     alert(f.name + "  " + f.size);
