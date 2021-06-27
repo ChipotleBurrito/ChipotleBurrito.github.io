@@ -170,22 +170,11 @@
 <div id="dropContainer" style="border:1px solid black;height:100px;">
    Drop Here
 </div> 
-
-<!--<input type="file" id="fileInput" -->
-       
-<label>Attachments</label>
-<div>
-  <input type="file" class="form-control input-ig" name="attachments" id="attachments" multiple>
-</div>
   
-<ul id="result"></ul>
-
-</body>
-</html>
-
-<script>
+  <script>
 var elem = document.getElementByID("attachments");
 elem.addEventListener('change', getFileData1, false);
+alert("test 1);  
   
 function getFileData1(){
   alert("Hi, hola, im listening1);
@@ -201,5 +190,20 @@ function getFileData1(){
 }
 
 </script>
+  
+
+<!--<input type="file" id="fileInput" -->
+       
+<label>Attachments</label>
+<div>
+  <input type="file" class="form-control input-ig" name="attachments" id="attachments" multiple>
+</div>
+  
+<ul id="result"></ul>
+
+</body>
+</html>
+
+
 
 </html>
