@@ -181,12 +181,7 @@ alert("test 1");
   
   alert("test 2");  
   
-var elem = document.getElementByID("attachments");
-  
-alert("test 3");    
-  
-elem.addEventListener('change', getFileData1, false);
-alert("test 4");      
+
 function getFileData1(){
   alert("Hi, hola, im listening1");
   const files = this.files;
@@ -199,6 +194,15 @@ function getFileData1(){
     list.append(child);
   }  
 }
+  
+var elem = document.getElementByID('attachments');
+  
+alert("test 3");    
+  
+elem.addEventListener('change', getFileData1, false);
+alert("test 4");      
+  
+  
 
 </script>
   
