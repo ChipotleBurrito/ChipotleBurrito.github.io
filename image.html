@@ -175,7 +175,7 @@
   
 <label>Attachments</label>
 <div>
-  <input type="file" name="attachments" id="attachments" onchange="getFileData1()">
+  <input type="file" name="attachments[]" id="attachments" multiple onchange="getFileData1()">
 </div>
  
 <output id="result"></output>
@@ -183,17 +183,21 @@
   
 <script>
    
-function getFileData1(){
+function getFileData1(evt){
   alert("Hi, hola, im listening1");
-  const files = this.files;
-  const list = document.getElementByID("result");
-  let child;  
-  for (let i = 0; i < files.length; i++){
-    child = document.getElement("li");
-    child.textContent = files[i].name;
-    alert('files[i].name');
-    list.append(child);
-  }  
+  var files = evt.target.files;
+  var output = [];
+  for (var i = 0, f; f = files[i]; i++) {
+    alert(f.name + "  " + f.size);
+  //const files = this.files;
+  //const list = document.getElementByID("result");
+  //let child;  
+  //for (let i = 0; i < files.length; i++){
+   // child = document.getElement("li");
+    //child.textContent = files[i].name;
+    //alert('files[i].name');
+    //list.append(child);
+  //}  
 }
   
 
