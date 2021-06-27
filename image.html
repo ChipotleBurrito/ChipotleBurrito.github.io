@@ -179,6 +179,7 @@
 </div>
  
 <output id="result"></output>
+<ul id="result"></ul>  
   
 <script>
    
@@ -190,12 +191,12 @@ function getFileData1(){
   for (let i = 0; i < files.length; i++){
     child = document.getElement("li");
     child.textContent = files[i].name;
-    
+    alert('files[i].name');
     list.append(child);
   }  
 }
   
-<!--document.getElementByID('attachments').addEventListener('change', getFileData1, false);-->
+
   
   
 
