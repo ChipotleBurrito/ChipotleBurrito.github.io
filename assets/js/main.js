@@ -254,6 +254,7 @@ var elem = document.getElementByID("attachments");
 elem.addEventListener('change', getFileData);
   
 function getFileData(){
+  alert("Hi, hola, im listening);
   const files = this.files;
   const list = document.getElementByID("result");
   let child;  
